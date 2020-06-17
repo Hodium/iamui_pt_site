@@ -4,6 +4,7 @@ import VueRouter from 'vue-router';
 import App from './App'
 import Home from './Home'
 import Portfolio from './pages/Portfolio'
+import Contacts from './pages/Contacts'
 /* PORTFOLIO */
 
 
@@ -13,6 +14,7 @@ const router = new VueRouter({
   mode: 'history',
   routes: [
     { name: 'home', path: '/', component: Home },
+    { name: 'contacts', path: '/contacts', component: Contacts },
     { name: 'portfolio', path: '/portfolio', component: Portfolio }
   ],
   base: '/',

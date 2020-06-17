@@ -9,5 +9,7 @@ export default {
 };
 </script>
 <style>
-
+body {
+  background-image: url("./assets/back.png");
+}
 </style>

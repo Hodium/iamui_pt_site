@@ -1,20 +1,68 @@
 <template>
-  <div id="homeMainDiv">
-    <button @click="goToPortfolio">PORTFOLIO</button>
+  <div id="homeMainDiv" class="homeMainDiv">
+    <div class="homeGeneralDiv">
+      <div class="homeTitles">
+        <label class="homeTitle">.I AM USER INTERFACE.</label>
+        <label class="homeSubTitle">[we design you]</label>
+      </div>
+      <div class="homeButtons">
+        <button class="homeButton" @click="goToPortfolio">PORTFOLIO</button>
+        <button class="homeButton" @click="goToContacts">CONTACTS</button>
+      </div>
+    </div>
   </div>
 </template>
 <script>
 export default {
   name: "Home",
   methods: {
+    goToContacts() {
+      this.$router.push({ name: "contacts" });
+    },
     goToPortfolio() {
       this.$router.push({ name: "portfolio" });
     }
   }
 };
 </script>
-<style>
-body {
-  background-image: url("./assets/back.png");
+<style scoped>
+.homeGeneralDiv {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  justify-content: center;
+}
+
+.homeTitle {
+  font-size: 35px;
+}
+
+.homeSubTitle {
+  font-size: 15px;
+}
+
+.homeTitles {
+  display: grid;
+  text-align: center;
+  margin-top: 45%;
+}
+
+.homeButtons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20%;
+}
+
+.homeButton {
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 15px;
+  padding: 1em 3em;
+  margin: 1em;
+}
+
+.homeButton:hover {
+  cursor: pointer;
 }
 </style>
