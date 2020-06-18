@@ -26,10 +26,16 @@ export default {
 };
 </script>
 <style scoped>
+.homeMainDiv {
+  width: 100%;
+  height: 100%;
+  background-image: url("./assets/back.png");
+}
+
 .homeGeneralDiv {
   width: 100%;
   height: 100%;
-  display: grid;
+  display: flow-root;
   justify-content: center;
 }
 
@@ -44,14 +50,15 @@ export default {
 .homeTitles {
   display: grid;
   text-align: center;
-  margin-top: 45%;
+  margin-top: 10%;
+  grid-auto-rows: min-content;
 }
 
 .homeButtons {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 20%;
+  margin-top: 1%;
 }
 
 .homeButton {

@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="appDiv">
     <router-view />
   </div>
 </template>
@@ -9,7 +9,13 @@ export default {
 };
 </script>
 <style>
+html,
 body {
-  background-image: url("./assets/back.png");
+  margin: 0;
+  height: 100%;
+}
+
+.appDiv {
+  height: 100%;
 }
 </style>
